@@ -2,7 +2,7 @@
  * Created by willstreeter on 9/4/17.
  */
 
-import {GC_MUTATION_TYPES } from './gc.mutation.types'
+import GC_MUTATION_TYPES from './gc.mutation.types'
 
 const  GarmentCollectionMutations = {
 
@@ -13,8 +13,8 @@ const  GarmentCollectionMutations = {
     },
 
     [GC_MUTATION_TYPES.GC_APPEND](state, collection) {
-        console.log("fetchGarmentCollection collection =",  collection);
-        let ids = state.collectionIds;
+        // console.log("fetchGarmentCollection collection =",  collection);
+        const ids = state.collectionIds;
         ids.push(collection.id);
         state.collectionIds = [ ...ids ];
         state.collections = Object.assign({}, state.collections, {

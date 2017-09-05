@@ -1,4 +1,5 @@
-import Card from "../../components/card/Card";
+import { mapGetters } from "vuex";
+import Card from "../../components/card";
 
 export default {
   name: "StyleCollection",

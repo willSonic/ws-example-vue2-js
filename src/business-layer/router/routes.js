@@ -1,6 +1,5 @@
 import Home from "../../view-layer/pages/home";
-import StyleCollection from "../../view-layer/pages/stylecollection";
-//import VenueDetail from "../views/pages/VenueDetail/VenueDetail";
+import  StyleCollection from "../../view-layer/pages/stylecollection";
 import NotFound from "../../view-layer/pages/not-found";
 
 const routes = [
@@ -11,7 +10,7 @@ const routes = [
   },
   {
     path: "/stylecollection",
-    component: Venues,
+    component: StyleCollection,
     props: route => ({
       query: { location: route.query.location, query: route.query.query }
     })

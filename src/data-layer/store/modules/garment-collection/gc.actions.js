@@ -2,14 +2,14 @@
  * Created by willstreeter on 9/4/17.
  */
 
-import {GC_MUTATION_TYPES } from './gc.mutation.types'
-import { fetchStyleCollective } from '../../../api/style.collective.api';
+import GC_MUTATION_TYPES  from './gc.mutation.types'
+import  fetchStyleCollective from '../../../api/style.collective.api';
 
 const  GarmentCollectionActions = {
   async fetchGarmentCollection( { commit }, payload ) {
-        let newCollection =  await fetchStyleCollective(payload.garmentType);
-        console.log("fetchGarmentCollection garmentList =", newCollection);
-        let garments = newCollection.data.products.map( (product) => {
+        const newCollection =  await fetchStyleCollective(payload.garmentType);
+       // console.log("fetchGarmentCollection garmentList =", newCollection);
+		   const garments = newCollection.data.products.map( (product) => {
                return  {
                       id: product.id,
                       name: product.name,
@@ -24,7 +24,7 @@ const  GarmentCollectionActions = {
                       categories: product.categories
                     }
         });
-        let garmentList = {
+        const garmentList = {
                               id: payload.garmentType,
                               isSelected: true,
                               offset: newCollection.data.metadata.offset,
@@ -33,7 +33,11 @@ const  GarmentCollectionActions = {
                               category: newCollection.data.metadata.category,
                               products: garments
                           };
-        console.log("fetchGarmentCollection garmentList =", garmentList);
+        // console.log("fetchGarmentCollection garmentList =", garmentList);
         commit(GC_MUTATION_TYPES.GC_APPEND, garmentList);
   }
 };
+
+
+
+export default GarmentCollectionActions;
