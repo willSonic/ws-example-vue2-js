@@ -35,6 +35,7 @@
 			"git add"
 		]
 	},
+	"pre-commit": "lint-staged",
 	"dependencies": {
 		"axios": "0.16.2",
 		"lodash.get": "4.4.2",
