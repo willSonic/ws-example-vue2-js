@@ -1,6 +1,5 @@
 import Vue from "vue";
 
-export default  Vue.extend( {
-  name:'not-found',
-
-});
+export default {
+  name: "NotFound"
+};

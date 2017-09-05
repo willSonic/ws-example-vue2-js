@@ -1,4 +1,3 @@
-
-<template src="./u.vue.html" ></template>
+<template src="./jumbotron.vue.html" ></template>
 <script src="./index.js" lang="js"></script>
-<style src="./home.vue.scss" lang="scss" scoped></style>
+<style src="./jumbotron.vue.scss" lang="scss" scoped></style>
