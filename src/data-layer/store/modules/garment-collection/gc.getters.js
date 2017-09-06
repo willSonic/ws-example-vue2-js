@@ -5,7 +5,9 @@
 const GarmentCollectionGetters = {
   collections: state => state.collections,
   collectionById: state => collectionId => state.collections[collectionId],
-  totalCollections: state => state.totalCollections
+  totalCollections: state => state.totalCollections,
+  selectedCollectionId: state => state.selectedCollectionId,
+  currentCollection: state =>  state.collections[state.selectedCollectionId]
 };
 
 export default GarmentCollectionGetters;

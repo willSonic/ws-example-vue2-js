@@ -12,13 +12,13 @@ export default {
     //    collections:"GarmentCollection/collections"
     // })
     styleCollection() {
-      console.log("styleCollection store", this.$store);
-      let something = this.$store.getters["GarmentCollection/collectionById"](
-        "red+dress"
-      );
-      console.log("styleCollection  something =", something);
+      let garmentCollection = this.$store.getters["GarmentCollection/currentCollection"];
+      console.log("styleCollection garmentCollection",garmentCollection);
+      if(!garmentCollection){
+          this.$router.push('/')
+      }
 
-      return something;
+      return garmentCollection;
     }
   },
 

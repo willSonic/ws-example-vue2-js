@@ -10,6 +10,7 @@ const  GarmentCollectionMutations = {
         state.collections = {};
         state.collectionIds = [];
         state.totalCollections = 0;
+        state.selectedCollectionId = '';
     },
 
     [GC_MUTATION_TYPES.GC_APPEND](state, collection) {
@@ -20,9 +21,10 @@ const  GarmentCollectionMutations = {
         state.collections = Object.assign({}, state.collections, {
               [collection.id]: collection.products
             });
+        state.selectedCollectionId = collection.id;
     },
 
-    [GC_MUTATION_TYPES.GC_RESET](state,totalCollections) {
+    [GC_MUTATION_TYPES.GC_TOTAL](state,totalCollections) {
         state.totalCollections = totalCollections;
     },
 

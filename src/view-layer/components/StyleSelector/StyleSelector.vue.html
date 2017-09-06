@@ -1,0 +1,44 @@
+
+<md-layout md-column >
+ <span class="md-headline">Style Search Terms</span>
+  <md-list class="md-dense">
+     <md-list-item>
+          <md-list class="md-dense">
+             <md-list-item>
+               <md-radio v-model="radioSex" id="radio-sex-1" name="women" class="md-primary" md-value="women">Women's</md-radio>
+            </md-list-item>
+             <md-list-item>
+               <md-radio v-model="radioSex" id="radio-sex-2" name="men" class="md-primary" md-value="men">Men's</md-radio>
+            </md-list-item>
+          </md-list>
+    </md-list-item>
+
+     <md-list-item>
+        <md-input-container>
+          <label  for="pantsSelection">Pants </label>
+          <md-select  @change="onClothingTypeSelection()"  name="pantsSelection" id="pants" v-model="pantsSelection">
+             <md-option value="pants+cargo">Cargo</md-option>
+             <md-option value="pants+casual">Casual</md-option>
+             <md-option value="pants+dress">Dress</md-option>
+          </md-select>
+        </md-input-container>
+      </md-list-item>
+
+      <md-list-item>
+        <md-input-container>
+          <label for="colorSelection">Color Selection</label>
+          <md-select name="colorSelection" id="colorSelection" v-model="colorSelection">
+             <md-option value="white">White</md-option>
+             <md-option value="black">Black</md-option>
+             <md-option value="red">Red</md-option>
+             <md-option value="blue">Blue</md-option>
+             <md-option value="green">Green</md-option>
+             <md-option value="yellow">Yellow</md-option>
+             <md-option value="red">Gray</md-option>
+          </md-select>
+        </md-input-container>
+    </md-list-item>
+  </md-list>
+  <md-button class="md-raised md-primary" :disabled="searchDisabled" @click="searchRequest" >Search</md-button>
+</md-layout>
+

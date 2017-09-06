@@ -1,0 +1,17 @@
+.main-sidebar-search{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+   background-color: #ffffff;
+   .md-dense{
+       background-color: #ffffff;
+   }
+
+   .md-radio-label{
+      color: #808080;
+      font-size:15px;
+   }
+}

@@ -41,6 +41,7 @@
       }
     }
     .md-toolbar {
+      background-color: #ffffff;
       min-height: 172px;
       border-bottom: 1px solid rgba(#000, .12);
     }
@@ -68,6 +69,7 @@
       overflow: auto;
       flex: 1;
       .md-inset .md-list-item-container {
+       background-color: #ffffff;
         padding-left: 36px;
       }
       .md-list-item-container {
