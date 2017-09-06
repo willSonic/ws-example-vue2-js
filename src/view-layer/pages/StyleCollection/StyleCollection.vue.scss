@@ -1,33 +1,36 @@
-.jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    color: inherit;
-    background-color: #eeeeee;
-}
 
-.jumbotron .container {
-    max-width: 100%;
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 .text-center {
     text-align: center;
 }
-.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+
+.md-theme-default{
+	background-color:#fff;
 }
 
-img {
-    vertical-align: middle;
-    border: 0;
+.img-medium-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 50%;
+	min-width: 50%;
+}
+
+.garment-card{
+	margin:20px;
+}
+
+.sc-medium{
+	max-width: 50%;
+	min-width: 50%;
+}
+
+img{
+	padding:10px;
+	max-height: 100%;
+	max-width: 100%;
+	margin:auto;
+	height: auto;
+
 }
 
