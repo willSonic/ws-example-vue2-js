@@ -1047,8 +1047,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000618, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000725"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000725.tgz#20f2313d79401e02f61840f39698bc8c558811a6"
+  version "1.0.30000726"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000726.tgz#9bb742f8d026a62df873bc03c06843d2255b60d7"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -5665,7 +5665,7 @@ vue-loader@12.1.0:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.2.2"
 
-vue-material:
+vue-material@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/vue-material/-/vue-material-0.7.4.tgz#51ac621a3fceeba3ea49ffe0858c0b45785efe10"
   dependencies:
