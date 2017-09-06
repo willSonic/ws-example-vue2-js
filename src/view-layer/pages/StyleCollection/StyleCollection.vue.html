@@ -1,0 +1,21 @@
+<div class="main-content">
+     <md-layout md-row>
+          <md-layout md-flex-xsmall="100" md-column  md-flex-small="50" md-flex-medium="30" md-flex-large="25"
+                  v-for="garment in styleCollection"  :key="garment.id" track-by="id">
+                  <md-card>
+                      <md-card-media >
+                        <img :src=garment.image.sizes.Medium.url alt="People"/>
+                      </md-card-media>
+                      <md-card-header>
+                        <div class="md-title">Title goes here</div>
+                        <div class="md-subhead">Subtitle here</div>
+                      </md-card-header>
+
+                      <md-card-actions>
+                        <md-button>Action</md-button>
+                        <md-button>Action</md-button>
+                      </md-card-actions>
+                    </md-card>
+          </md-layout>
+    </md-layout>
+</div>

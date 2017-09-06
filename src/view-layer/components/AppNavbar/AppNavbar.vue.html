@@ -1,0 +1,31 @@
+<!--
+<nav class="component-navbar navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<router-link to="/" class="navbar-brand">
+				<img src="../../../assets/images/logo.png" alt="brand" class="img-responsive"> Liberty
+			</router-link>
+			<button @click="onClickLogin" >Search</button>
+		</div>
+	</div>
+</nav>
+-->
+
+  <div class="page-content">
+    <md-whiteframe md-tag="md-toolbar" md-elevation="1" class="main-header">
+      <md-button class="md-icon-button nav-trigger" @click="toggleLeftSidenav">
+        <md-icon>menu</md-icon>
+      </md-button>
+
+      <div class="md-title">{{ pageTitle }}</div>
+
+      <md-button class="md-button" @click="onClickLogin">
+       Get Style
+      </md-button>
+      <md-button href="https://github.com/marcosmoura/vue-material" target="_blank" rel="noopener" class="md-icon-button github">
+        <md-icon md-src="~../../../assets/images/logo.png"></md-icon>
+      </md-button>
+    </md-whiteframe>
+
+    <slot></slot>
+  </div>

@@ -1,6 +1,14 @@
-import Home from "../../view-layer/pages/home";
-import  StyleCollection from "../../view-layer/pages/stylecollection";
-import NotFound from "../../view-layer/pages/not-found";
+import Home from "../../view-layer/pages/Home/Home";
+import StyleCollection from "../../view-layer/pages/StyleCollection/StyleCollection";
+import NotFound from "../../view-layer/pages/NotFound/NotFound";
+
+function dynamicPropsFn(route) {
+  console.log("dynamicPropsFn =", route);
+
+  return {
+    query: { selection: route.query.selection, page: route.query.page }
+  };
+}
 
 const routes = [
   {
@@ -9,11 +17,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/stylecollection",
+    path: "/stylecollection/",
     component: StyleCollection,
-    props: route => ({
-      query: { location: route.query.location, query: route.query.query }
-    })
+    props: dynamicPropsFn
   },
   // {
   //   path: "/venues/detail",
