@@ -19,7 +19,7 @@ const  GarmentCollectionMutations = {
         ids.push(collection.id);
         state.collectionIds = [ ...ids ];
         state.collections = Object.assign({}, state.collections, {
-              [collection.id]: collection.products
+              [collection.id]: collection
             });
         state.selectedCollectionId = collection.id;
     },

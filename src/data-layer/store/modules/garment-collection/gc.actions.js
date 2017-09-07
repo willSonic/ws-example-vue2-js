@@ -12,7 +12,7 @@ const GarmentCollectionActions = {
     const garments = newCollection.data.products.map(product => {
       return {
         id: product.id,
-        name: product.name,
+				fullName: product.fullName,
         currency: product.currency,
         price: product.price,
         inStock: product.inStock,
@@ -33,7 +33,7 @@ const GarmentCollectionActions = {
       category: newCollection.data.metadata.category,
       products: garments
     };
-    // console.log("fetchGarmentCollection garmentList =", garmentList);
+    console.log("fetchGarmentCollection garmentList =", garmentList);
     commit(GC_MUTATION_TYPES.GC_APPEND, garmentList);
   }
 };

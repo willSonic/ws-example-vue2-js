@@ -1,14 +1,14 @@
 
-<md-layout md-column class="collection-state">
+<md-layout md-column class="collection-state" v-if="collection">
  <span class="md-headline">Style Collection State</span>
   <md-list>
     <md-list-item>
-      <md-icon>move_to_inbox</md-icon> <span>Inbox</span>
-    </md-list-item>
+			{{collectionTitle}}
+		</md-list-item>
 
     <md-list-item>
       <md-icon>send</md-icon> <span>Sent Mail</span>
-    </md-list-item>
+		</md-list-item>
 
     <md-list-item>
       <md-icon>delete</md-icon> <span>Trash</span>
