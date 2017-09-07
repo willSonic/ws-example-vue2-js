@@ -13,7 +13,6 @@ export default {
     // })
     styleCollection() {
       let garmentCollection = this.$store.getters["GarmentCollection/currentCollection"];
-      console.log("styleCollection garmentCollection",garmentCollection);
       if(!garmentCollection){
           this.$router.push('/')
       }

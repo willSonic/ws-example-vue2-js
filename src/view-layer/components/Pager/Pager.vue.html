@@ -1,0 +1,21 @@
+
+<div class="page-content">
+  <div class="pg-btns-cntnr">
+      <!--  <md-button v-on:click="pageCell = pageCell -2" v-bind:hide="pageCell - 2 &lt; 1 ? true : false">{{ pageCell - 2 }}</md-button> -->
+      <md-button  class="md-fab md-mini offset-page"
+         @click="pageIcon(-1)" :disabled="leadPgVal">{{ pageCell - 1 }}</md-button>
+      <md-button class="md-fab md-primary">
+                 {{ pageCell}}
+      </md-button>
+      <md-button class="md-fab md-mini offset-page"   @click="pageIcon(1)" :disabled="tailPgVal">{{ pageCell + 1 }}</md-button>
+     <!-- <md-button v-on:click="pageCell = pageCell + 2" v-bind:hide="pageCell + 2 &gt; last ? true : false">{{ pageCell + 2 }}</md-button>-->
+  </div>
+  <div class="pg-btns-cntnr">
+      <md-button class="md-icon-button left-chev md-no-ink"  @click="pageIcon(-1)" :disabled="leadPgVal">
+            <md-icon>keyboard_arrow_left</md-icon>
+      </md-button>
+      <md-button class="md-icon-button right-chev"  @click="pageIcon(1)" :disabled="tailPgVal">
+            <md-icon>keyboard_arrow_right</md-icon>
+      </md-button>
+  </div>
+</div>

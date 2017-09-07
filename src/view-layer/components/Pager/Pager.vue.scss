@@ -1,0 +1,34 @@
+.page-content{
+  align-self:stretch;
+  width:100%;
+}
+.pg-btns-cntnr {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items:center;
+  align-self:stretch;
+}
+
+.md-icon-button.left-chev,
+.md-icon-button.right-chev{
+   i{
+      color:dodgerblue;
+    }
+   :hover{
+      color: gainsboro !important;
+   }
+   font-size:30px;
+   line-height:40px;
+}
+.md-button.md-fab.offset-page{
+  margin-top:10px;
+}
+.md-button.md-fab.offset-page:hover{
+     background-color: gainsboro !important;
+}
+
+.md-theme-default.md-button:not([disabled]).md-fab{
+  color:dodgerblue;
+  background-color:transparent;
+}

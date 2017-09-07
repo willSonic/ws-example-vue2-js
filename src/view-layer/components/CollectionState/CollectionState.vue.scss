@@ -1,4 +1,17 @@
+$sizebar-size: 280px;
+
 .collection-state,
 .md-theme-default.md-list{
     background-color:#fff;
+}
+
+.side-bar-unit{
+  align-items: stretch;
+  width: 100%;
+}
+
+.pager-item{
+  width:$sizebar-size;
+  justify-content: center;
+  align-items:center;
 }

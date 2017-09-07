@@ -1,4 +1,4 @@
-<div class="main-content" v-if>
+<div class="main-content" v-if="styleCollection">
      <md-layout md-row>
           <md-layout md-column   md-flex-xsmall="100" md-flex-small="50" md-flex-medium="30" md-flex-large="25"
                   v-for="garment in styleCollection.products"  :key="garment.id" track-by="id">
