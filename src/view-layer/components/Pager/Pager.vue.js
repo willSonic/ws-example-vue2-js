@@ -4,6 +4,10 @@
 
 export default {
   name: "Pager",
+	props:{
+		  selectionId:String,
+		  currentPage:Number
+	},
 	data:()=> {
 		return {
 			pitch: 40,
@@ -33,6 +37,18 @@ export default {
     },
     pageIcon: function(value){
          this.pageCell =  this.pageCell +value;
+			console.log('pageIcon this.selectionId =', this.selectionId)
+				this.$store
+					.dispatch("GarmentCollection/fetchGarmentCollection", {
+						selection:  this.selectionId,
+						page:  this.pageCell
+					})
+					.then(() => {
+						this.$router.push({
+							path: "stylecollection",
+							query: { selection: this.selectionId, page: this.pageCell }
+						});
+					});
     }
   }
 };

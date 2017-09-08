@@ -6,31 +6,47 @@ export default {
   components: {
     Card
   },
-
-  computed: {
-    // ...mapGetters({
-    //    collections:"GarmentCollection/collections"
-    // })
-    styleCollection() {
-      let garmentCollection = this.$store.getters["GarmentCollection/currentCollection"];
-      if(!garmentCollection){
-          this.$router.push('/')
-      }
-
-      return garmentCollection;
-    }
+	data: ()=>{
+	  return{
+			garmentCollection:null,
+		}
   },
+  // computed: {
+  //   // ...mapGetters({
+  //   //    collections:"GarmentCollection/collections"
+  //   // })
+  //   styleCollection() {
+  //     let garmentCollection = this.$store.getters["GarmentCollection/currentCollection"];
+  //     if(!garmentCollection){
+  //         this.$router.push('/')
+  //     }
+  //     return garmentCollection.products[garmentCollection.currentPage];
+  //   }
+  // },
+	created() {
+		this.getGarmentCollection()
+	},
 
-  created() {
-    this.setCollections();
-  },
 
-  methods: {
-    setCollections() {
-      this.fetchGarmentCollections();
-    },
-    fetchGarmentCollections() {
-      //this.$store.dispatch("fetchGarmentCollections", this.$route.query.id);
-    }
-  }
+	methods: {
+		getGarmentCollection:function() {
+			console.log('getGarmentCollect =', this.$route)
+			let aCollection = this.$store.getters["GarmentCollection/collectionById"](this.$route.query.selection);
+			if(!aCollection){
+				this.$router.push('/')
+			}
+			if(aCollection.currentPage !== this.$route.query.page){
+				this.$store.dispatch("GarmentCollection/updateCurrentPage", aCollection)
+			}
+
+
+			this.garmentCollection = aCollection.products[this.$route.query.page];
+
+		}
+	},
+	watch: {
+		'$route':'getGarmentCollection'
+	}
+
+
 };

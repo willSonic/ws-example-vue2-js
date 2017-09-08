@@ -3,8 +3,9 @@
  */
 
 const GarmentCollectionGetters = {
-  collections: state => state.collections,
-  collectionById: state => collectionId => state.collections[collectionId],
+	collections: state => state.collections,
+  collectionIds: state => state.collectionIds,
+	collectionById: state => collectionId => state.collections[collectionId],
   totalCollections: state => state.totalCollections,
   selectedCollectionId: state => state.selectedCollectionId,
   currentCollection: state =>  state.collections[state.selectedCollectionId],

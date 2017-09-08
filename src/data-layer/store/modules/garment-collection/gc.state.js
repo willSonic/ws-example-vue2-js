@@ -6,7 +6,7 @@ const GarmentCollectionState = {
    collections: {},
    collectionIds: [],
    totalCollections: 0,
-   selectedCollectionId:undefined,
+   selectedCollectionId:'',
 };
 
 export default GarmentCollectionState;
